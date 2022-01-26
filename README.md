@@ -1,31 +1,24 @@
 <div align="center">
    <p>
-    <h1>react-form-Viewer</h1>
-    <b>An easy multi column form builder</b>
-  </p>
-  <p>
-     <i>Build or view, your beautiful form is just a click away.</i>
-     <br/>
-     <i>No technical knowledge is required.</i>
-     <br/>
-     <b>NO BACKEND,Entirely based on frontend.</b>
-  </p>
-
-  <p>
-
+    <h1>react-themed-fields</h1>
+    <b>A simple field set to be used on our day to to day work</b>
   </p>
 </div>
 
 ---
 
-![GitHub watchers](https://img.shields.io/github/watchers/koustov/react-form-viewer.svg?logo=github&label=Watch) ![GitHub watchers](https://img.shields.io/github/issues/koustov/react-form-viewer?logo=github&label=Issues) ![GitHub watchers](https://img.shields.io/github/stars/koustov/react-form-viewer?logo=github&label=Stars) ![GitHub watchers](https://img.shields.io/npm/dt/react-form-viewer.svg?logo=npm&label=downloads)
+![GitHub watchers](https://img.shields.io/github/watchers/koustov/react-themed-fields.svg?logo=github&label=Watch) ![GitHub watchers](https://img.shields.io/github/issues/koustov/react-themed-fields?logo=github&label=Issues) ![GitHub watchers](https://img.shields.io/github/stars/koustov/react-themed-fields?logo=github&label=Stars) ![GitHub watchers](https://img.shields.io/npm/dt/react-themed-fields.svg?logo=npm&label=downloads)
 
 This is a **fully customizable** form builder based on [`React`](https://facebook.github.io/react/)
+A thin wrapper on top of ['MaterialUi'](https://mui.com/)
 
-![image info](./docs/images/snapshot.png)
+Detailed information at ['react-form-planner](https://www.npmjs.com/package/react-form-viewer)
+
 **Table of Contents**
 
-- [Demo](#demo)
+
+- [Controls](#controls)
+  - [Basic](#basic)
 - [Playground](#playground)
 - [Features](#features)
 - [When do you need it](#when-do-you-need-it)
@@ -46,13 +39,17 @@ This is a **fully customizable** form builder based on [`React`](https://faceboo
 - [Contribution 🍰](#contribution-)
 - [License](#license)
 
-## Demo
+## Controls
 
-Visit https://react-form-viewer.vercel.app/
+### Basic
+![image info](./docs/images/basic.PNG)
+
+
+Visit https://react-themed-fields.vercel.app/
 
 ## Playground
 
-Visit https://codesandbox.io/s/react-form-viewer-smw51
+Visit https://codesandbox.io/s/react-themed-fields-smw51
 
 ## Features
 
@@ -86,13 +83,13 @@ Visit https://codesandbox.io/s/react-form-viewer-smw51
 ### Install 🐙
 
 ```bash
-npm install react-form-viewer
+npm install react-themed-fields
 ```
 
 or
 
 ```bash
-yarn add react-form-viewer
+yarn add react-themed-fields
 ```
 
 ## Highlight 🔥
@@ -112,7 +109,7 @@ This project contains an advanced Form Builder and a Form Viewer.
 Import FormPlanner component
 
 ```jsx
-import { FormPlanner } from 'react-form-viewer'
+import { FormPlanner } from 'react-themed-fields'
 ```
 
 Just drop it to desired place
@@ -200,7 +197,7 @@ This is a full fledged form viewer.
 Import FormPlanner component
 
 ```jsx
-import { FormPlanner } from 'react-form-viewer'
+import { FormPlanner } from 'react-themed-fields'
 ```
 
 Just drop it to desired place

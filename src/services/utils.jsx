@@ -1,6 +1,10 @@
-export const getThemeData = (theme, key, defaultvalue = '') => {
+export const getThemeData = (root, key, defaultvalue = '') => {
+  const keySegments = key.split('.')
+  let val = root
   try {
-    const val = eval(`theme.${key}`)
+    keySegments.forEach((k) => {
+      val = val[k]
+    })
     return val
   } catch {
     return defaultvalue

@@ -18,7 +18,7 @@ export const RTFPaper = styled(Paper)`
     ]} !important;
   padding: 8px;
   backdrop-filter: blur(
-    ${({ theme }) => getThemeData(theme, 'colors.card.blur') || '0px'}
+    ${({ theme }) => getThemeData(theme.colors, 'card.blur') || '0px'}
   );
 `
 
@@ -40,10 +40,10 @@ export const RTFTabPanel = styled.div`
 
 export const RTFTabs = styled(Tabs)`
   display: flex;
-  color: ${({ theme }) => getThemeData(theme, 'colors.ternaryText')} !important;
+  color: ${({ theme }) => getThemeData(theme.colors, 'ternaryText')} !important;
   .MuiTab-textColorPrimary {
     color: ${({ theme }) =>
-      getThemeData(theme, 'colors.ternaryText')} !important;
+      getThemeData(theme.colors, 'ternaryText')} !important;
   }
 `
 
@@ -57,7 +57,7 @@ export const RTFPlannerWrapper = styled(Grid)`
   height: 100%;
   padding: 4px;
   background: ${(props) =>
-    getThemeData(props.theme, 'colors.background')} !important;
+    getThemeData(props.theme.colors, 'background')} !important;
 `
 export const RTFSideBarWrapper = styled(Grid)`
   display: block;
@@ -78,12 +78,12 @@ export const RTFPlanner = styled(RTFPaper)`
   overflow-x: hidden;
   height: inherit;
   background-image: linear-gradient(
-    ${(props) => getThemeData(props.theme, 'colors.card.start')},
-    ${(props) => getThemeData(props.theme, 'colors.card.end')}
+    ${(props) => getThemeData(props.theme.colors, 'card.start')},
+    ${(props) => getThemeData(props.theme.colors, 'card.end')}
   ) !important;
 
   backdrop-filter: blur(
-    ${({ theme }) => getThemeData(theme, 'colors.card.blur') || '0px'}
+    ${({ theme }) => getThemeData(theme.colors, 'card.blur') || '0px'}
   );
   > * {
     margin: 8px;
@@ -110,7 +110,7 @@ export const RTFPreviewBox = styled.div`
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #787878;
-  background: ${(props) => getThemeData(props.theme, 'colors.modal.bg')};
+  background: ${(props) => getThemeData(props.theme.colors, 'modal.bg')};
 `
 
 export const RTFEModal = styled(Modal)`
@@ -120,8 +120,8 @@ export const RTFEModal = styled(Modal)`
 `
 export const RTFModalLarge = styled.div`
   background-image: linear-gradient(
-    ${(props) => getThemeData(props.theme, 'colors.card.start')},
-    ${(props) => getThemeData(props.theme, 'colors.card.end')}
+    ${(props) => getThemeData(props.theme.colors, 'card.start')},
+    ${(props) => getThemeData(props.theme.colors, 'card.end')}
   ) !important;
   height: 90vh;
   width: 90vw;
@@ -131,8 +131,8 @@ export const RTFPaperVerticalPadding = styled(RTFPaper)`
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(
-    ${(props) => getThemeData(props.theme, 'colors.card.start')},
-    ${(props) => getThemeData(props.theme, 'colors.card.end')}
+    ${(props) => getThemeData(props.theme.colors, 'card.start')},
+    ${(props) => getThemeData(props.theme.colors, 'card.end')}
   ) !important;
   > div {
     padding: 8px;
@@ -152,12 +152,12 @@ export const SmallHeader = styled.div`
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: ${(props) => getThemeData(props.theme, 'colors.secondaryText')};
+  color: ${(props) => getThemeData(props.theme.colors, 'secondaryText')};
 `
 
 export const RTFMediumHeader = styled(SmallHeader)`
   font-size: 16px;
-  color: ${(props) => getThemeData(props.theme, 'colors.primaryText')};
+  color: ${(props) => getThemeData(props.theme.colors, 'primaryText')};
 `
 export const RTFHeaderBar = styled.div`
   height: 20px;
@@ -181,17 +181,17 @@ export const RTFHeaderBar = styled.div`
 export const RTFMediumHeaderBar = styled(RTFHeaderBar)`
   height: 40px;
   border-bottom: 1px solid
-    ${(props) => getThemeData(props.theme, 'colors.secondaryText')};
+    ${(props) => getThemeData(props.theme.colors, 'secondaryText')};
 `
 
 export const RTFFiedlSet = styled.fieldset`
   border: 1px solid transparent;
   border-radius: 4px;
-  border-color: ${(props) => getThemeData(props.theme, 'colors.border')};
+  border-color: ${(props) => getThemeData(props.theme.colors, 'input.border')};
   height: 100%;
   > legend {
     padding: 0rem 1rem;
-    color: ${(props) => getThemeData(props.theme, 'colors.primaryText')};
+    color: ${(props) => getThemeData(props.theme.colors, 'primaryText')};
     span {
       margin-left: 0.5rem;
     }
@@ -199,10 +199,10 @@ export const RTFFiedlSet = styled.fieldset`
 `
 
 export const RTFInputFiedlSet = styled(RTFFiedlSet)`
-  border-color: ${(props) => getThemeData(props.theme, 'colors.input.border')};
+  border-color: ${(props) => getThemeData(props.theme.colors, 'input.border')};
   > legend {
     color: ${({ theme }) =>
-      getThemeData(theme, 'colors.ternaryText')} !important;
+      getThemeData(theme.colors, 'ternaryText')} !important;
   }
 `
 
@@ -289,9 +289,9 @@ export const RTFFormRow = styled.div`
   .action-button-wrapper {
     display: none;
   }
-  /* .element-wrapper {
+  .element-wrapper {
     border: 1px solid transparent;
-  } */
+  }
   &:hover {
     .action-button-wrapper {
       display: ${(props) => (props.editable ? 'flex' : 'none')};
@@ -312,14 +312,14 @@ export const RTFFormColumn = styled.div`
   border: 1px solid
     ${(props) =>
       props.editable && props.selected
-        ? getThemeData(props.theme, 'colors.primaryText')
+        ? getThemeData(props.theme.colors, 'primaryText')
         : 'transparent'};
   &:hover {
     border-radius: 4px;
     border: 1px solid
       ${(props) =>
         props.editable && !props.bordered
-          ? getThemeData(props.theme, 'colors.primaryText')
+          ? getThemeData(props.theme.colors, 'primaryText')
           : 'transparent'};
   }
 `
@@ -330,13 +330,14 @@ export const RTFNoContentAvailable = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px dotted ${(props) => getThemeData(props.theme, 'colors.border')};
+  border: 1px dotted
+    ${(props) => getThemeData(props.theme.colors, 'input.border')};
   border-radius: 4px;
-  color: ${({ theme }) => getThemeData(theme, 'colors.secondaryText')};
+  color: ${({ theme }) => getThemeData(theme.colors, 'secondaryText')};
   width: 100%;
   > div {
     margin-right: 8px;
-    color: ${({ theme }) => getThemeData(theme, 'colors.secondaryText')};
+    color: ${({ theme }) => getThemeData(theme.colors, 'secondaryText')};
     letter-spacing: 4px;
     font-size: 10px;
   }
@@ -352,8 +353,8 @@ export const RTRTFaper = styled(Paper)`
 
 export const RTFEditorPaper = styled(RTRTFaper)`
   background-image: linear-gradient(
-    ${(props) => getThemeData(props.theme, 'colors.card.start')},
-    ${(props) => getThemeData(props.theme, 'colors.card.end')}}
+    ${(props) => getThemeData(props.theme.colors, 'card.start')},
+    ${(props) => getThemeData(props.theme.colors, 'card.end')}}
   ) !important;
 `
 
@@ -367,8 +368,8 @@ export const RTRTFlannerWrapper = styled(Grid)`
 export const RTFSideBar = styled(RTRTFaper)`
   height: 100%;
   background-image: linear-gradient(
-    ${(props) => getThemeData(props.theme, 'colors.card.start')},
-    ${(props) => getThemeData(props.theme, 'colors.card.end')}
+    ${(props) => getThemeData(props.theme.colors, 'card.start')},
+    ${(props) => getThemeData(props.theme.colors, 'card.end')}
   ) !important;
   .fp-side-bar {
     height: 100%;
@@ -400,8 +401,8 @@ export const RTRTFlanner = styled(RTRTFaper)`
   height: 100%;
   padding: 4px;
   background-image: linear-gradient(
-    ${(props) => getThemeData(props.theme, 'colors.card.start')},
-    ${(props) => getThemeData(props.theme, 'colors.card.end')}
+    ${(props) => getThemeData(props.theme.colors, 'card.start')},
+    ${(props) => getThemeData(props.theme.colors, 'card.end')}
   );
   > * {
     margin: 8px;
@@ -437,7 +438,7 @@ export const RTFControlEditBox = styled.div`
   border: 1px solid;
   display: flex;
   flex-direction: column;
-  border-color: ${(props) => getThemeData(props.theme, 'colors.border')};
+  border-color: ${(props) => getThemeData(props.theme.colors, 'border')};
 `
 
 export const RTRTFaperVerticalPadding = styled(RTRTFaper)`
@@ -462,23 +463,12 @@ export const RTFEditorModal = styled(RTRTFaper)`
 `
 
 export const RTFDividerField = styled.hr`
-  margin: 25px auto 30px;
+  margin: 5px auto 5px;
   padding: 0;
   border: 0;
-  border-top: solid 3px;
+  border-top: solid 1px;
   text-align: center;
-  border-color: ${(props) => getThemeData(props.theme, 'colors.border')};
-
-  &:after {
-    content: '\f0e7';
-    display: inline-block;
-    position: relative;
-    top: -1.7rem;
-    padding: 0 1rem;
-    font-family: FontAwesome;
-    font-size: 3rem;
-    background-color: #fff;
-  }
+  border-color: ${(props) => getThemeData(props.theme.colors, 'border')};
 `
 export const RTFFormContainer = styled.div`
   padding: 1rem;
@@ -486,7 +476,7 @@ export const RTFFormContainer = styled.div`
 export const RTFFormWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background: ${(props) => getThemeData(props.theme, 'colors.background')};
+  background: ${(props) => getThemeData(props.theme.colors, 'background')};
   background-image: url(${(props) => props.background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -535,11 +525,11 @@ export const RTFDrawer = styled(Drawer)`
     width: 600px !important;
     background: none !important;
     background-image: linear-gradient(
-      ${(props) => getThemeData(props.theme, 'colors.card.start')},
-      ${(props) => getThemeData(props.theme, 'colors.card.end')}
+      ${(props) => getThemeData(props.theme.colors, 'card.start')},
+      ${(props) => getThemeData(props.theme.colors, 'card.end')}
     ) !important;
     backdrop-filter: blur(
-      ${({ theme }) => getThemeData(theme, 'colors.card.blur') || '0px'}
+      ${({ theme }) => getThemeData(theme.colors, 'card.blur') || '0px'}
     );
   }
 `
